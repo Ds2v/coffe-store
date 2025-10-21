@@ -1,0 +1,71 @@
+###########################
+# Directorios de Compilacion
+###########################
+# Binarios
+[Bb]in/
+[Oo]bj/
+# Resultados de Pruebas
+TestResults/
+# Paquetes NuGet
+*.nupkg
+*.snupkg
+# Archivos de publicacion
+Publish/
+*.publishproj
+
+###########################
+# Configuracion del IDE
+###########################
+# Archivos de Solucion de Usuario de Visual Studio
+*.suo
+*.user
+*.useros
+# Carpetas de Configuracion del IDE (oculta)
+.vs/
+# Archivos de Codigo Limpio
+*.[Cc]ode[Cc]leanup
+
+###########################
+# Paquetes y Dependencias
+###########################
+# Directorio local de paquetes NuGet (para proyectos antiguos)
+packages/
+
+# Dependencias de paquetes si usas un sistema de gestion como Bower, npm, etc.
+# Si usas JavaScript/TypeScript con tu proyecto .NET
+[Nn]ode_[Mm]odules/
+bower_components/
+
+###########################
+# Archivos de Respaldo y Temporales
+###########################
+*~
+*.bak
+*.log
+*.tmp
+# Archivos de compilacion de Resharper
+_ReSharper*/
+*.dotsettings.user
+# Archivos de Visual Studio Code
+.vscode/
+
+###########################
+# Archivos de Bases de Datos
+###########################
+# Archivos de base de datos local (generalmente para desarrollo)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+###########################
+# Archivos Sensibles/Configuracion Local
+###########################
+# Ignorar archivos de configuracion de aplicacion que pueden contener secretos
+# PERO MANTENER appsettings.json BASE
+# Es mejor ignorar las versiones con informacion sensible
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+# Si manejas secretos de usuario
+secrets.json

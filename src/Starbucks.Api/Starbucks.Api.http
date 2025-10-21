@@ -1,0 +1,7 @@
+@Starbucks.Api_HostAddress = http://localhost:5100
+
+// EN caso que aparezca el codigo pegado, como error de sintaxis, hacer el espaciado
+GET {{ Starbucks.Api_HostAddress }}/weatherforecast/
+Accept: application/json
+
+###
