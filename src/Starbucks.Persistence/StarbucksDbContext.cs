@@ -13,6 +13,8 @@ public class StarbucksDbContext : DbContext
     public required DbSet<Coffe> Coffes { get; set; }
     public required DbSet<Ingredient> Ingredients { get; set; }
 
+    // Metodo para crear, modificar o personalizar los modelos de las clases entidad
+    // Tambien permite agragar data dentro de las tablas
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -49,6 +51,14 @@ public class StarbucksDbContext : DbContext
             {
                 j.HasKey(k => new { k.CoffeId, k.IngredientId });
             }
-        );   
+        );
+        // Inserta la data dentro del modelo de categorias
+        modelBuilder.Entity<Category>().HasData(GetCategories());
+    }
+    
+    // Metodo que genera la coleccion de datos desde un Enum 
+    public IEnumerable<Category> GetCategories()
+    {
+        return Enum.GetValues<CategoryEnum>().Select(p => Category.Create((int)p));
     }
 }
