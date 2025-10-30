@@ -27,15 +27,14 @@ Su objetivo es ofrecer una interfaz intuitiva y un backend sólido, garantizando
 
 ## 🧱 Estructura del Proyecto
 
-CoffeeStoreApp/
+src/
 │
-├── Core/ # Entidades, Interfaces, Casos de uso
-├── Infrastructure/ # Persistencia, repositorios y adaptadores
-├── Application/ # Lógica de negocio, servicios y validaciones
-├── WebAPI/ # Endpoints RESTful y controladores
-└── Tests/ # Pruebas unitarias y de integración
+├── **Core**/ # Entidades, Interfaces, Casos de uso
+├── **Infrastructure**/ # Persistencia, repositorios y adaptadores
+├── **Application**/ # Lógica de negocio, servicios y validaciones
+├── **Api**/ # Endpoints RESTful y controladores
+└── **Tests**/ # Pruebas unitarias y de integración
 
-text
 
 ---
 
