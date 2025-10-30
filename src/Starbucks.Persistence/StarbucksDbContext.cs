@@ -3,7 +3,8 @@ using Starbucks.Domain;
 
 namespace Starbucks.Persistence;
 
-public class StarbucksDbContext : DbContext
+// Se agrega un constructor primario "DbContextOptions options" para que reciba la cadena de conexión BD
+public class StarbucksDbContext(DbContextOptions options) : DbContext(options)
 {
     /*
     * Se crean los modelos que van a ser equivalentes 
@@ -55,7 +56,7 @@ public class StarbucksDbContext : DbContext
         // Inserta la data dentro del modelo de categorias
         modelBuilder.Entity<Category>().HasData(GetCategories());
     }
-    
+
     // Metodo que genera la coleccion de datos desde un Enum 
     public IEnumerable<Category> GetCategories()
     {
